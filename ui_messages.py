@@ -9,14 +9,14 @@ def print_menu():
 
 # --- Printing Pokémon info (ui) ---
 def print_pokemon(pokemon):
-    name = pokemon["name"].title()
-    id = pokemon["id"]
-    height = pokemon["height"]
-    weight = pokemon["weight"]
-    types = pokemon["types"]
+    pokemon_name = pokemon["name"].title()
+    pokemon_id = pokemon["id"]
+    pokemon_height = pokemon["height"]
+    pokemon_weight = pokemon["weight"]
+    pokemon_types = pokemon["types"]
     print("\n🎯 Pokémon Drawn:")
-    print(f"Name   : {name}")
-    print(f"ID     : {id}")
-    print(f"Height : {height}")
-    print(f"Weight : {weight}")
-    print(f"Types  : {', '.join(types)}\n")
+    print(f"Name   : {pokemon_name}")
+    print(f"ID     : {pokemon_id}")
+    print(f"Height : {pokemon_height}")
+    print(f"Weight : {pokemon_weight}")
+    print(f"Types  : {', '.join(pokemon_types)}\n")
