@@ -21,4 +21,4 @@ sudo chown -R ec2-user:ec2-user /home/ec2-user/pokeapi_part2
 
 # Creating a welcome message
 echo 'echo "Welcome to the Pokemon Drawer! To start the app, type: python3 main.py"' >> /home/ec2-user/.bashrc
-echo 'cd ~/pokemon_project && python3 main.py' >> /home/ec2-user/.bashrc
+echo 'cd ~/pokeapi_part2 && python3 main.py' >> /home/ec2-user/.bashrc
