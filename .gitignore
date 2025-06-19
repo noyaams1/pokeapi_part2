@@ -1,5 +1,10 @@
-terraform.tfstate
-.terraform.lock.hcl
 .terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+*.tfvars
+override.tf
+terraform.tfvars
+
 .venv/
 __pycache__/
