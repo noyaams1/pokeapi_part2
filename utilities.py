@@ -1,8 +1,9 @@
 from constant_vars import DB_PATH
 from ui_messages import print_pokemon
 from json_functions import save_json
-from api import get_all_pokemon_data , get_pokemon_details_from_api
+from api import get_all_pokemon_data, get_pokemon_details_from_api
 import random
+
 
 # --- checking if pokemon is already in DB, if not: adding it.
 def update_db_if_needed(db, details):
@@ -18,6 +19,7 @@ def update_db_if_needed(db, details):
         print_pokemon(details)
         return False
 
+
 # --- Random drawing---
 def random_choice(db):
     all_pokemon = get_all_pokemon_data()
@@ -29,6 +31,7 @@ def random_choice(db):
     details = get_pokemon_details_from_api(chosen)
     if details:
         update_db_if_needed(db, details)
+
 
 # --- Drawing pokemon by ID ---
 def drawing_by_id(db):
@@ -58,5 +61,3 @@ def drawing_by_name(db):
         details = get_pokemon_details_from_api(name)
         if details:
             update_db_if_needed(db, details)
-
-

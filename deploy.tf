@@ -1,12 +1,5 @@
-# def save_json(data, filename):
-#     with open(filename, "w") as f:
-#         json.dump(data, f, indent=4)
 
-
-# save_json(db, DB_PATH)
-
-
-# Connecting the app server to the database in aws dynamodb service
+# Connecting the app server to the 'pokemons_collection' database 
 
 # Creating 'pokemons_collection' database on aws dynamodb
 resource "aws_dynamodb_table" "pokemons_collection" {
@@ -24,20 +17,8 @@ resource "aws_dynamodb_table" "pokemons_collection" {
     type = "N"
   }
 
-    # attribute {
-    #     name = "height"
-    #     type = "N"
-    #     }
-        
-    # attribute {
-    #     name = "weight"
-    #     type = "N"
-    # }
 
-    # attribute {
-    # name = "types"
-    # type = "L"
-    # }
+
     range_key = "pokemon_id"
   tags = {
     Name        = "pokemons_collection"

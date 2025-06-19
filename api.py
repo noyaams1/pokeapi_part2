@@ -12,19 +12,20 @@ def get_all_pokemon_data():
         return []
 
 
-# --- Get full details of a Pokémon by name or ID ---
+# --- Get full details of a Pokemon by identifier(name or ID) ---
 def get_pokemon_details_from_api(identifier):
     url = f"{API_BASE_URL}/pokemon/{identifier}"
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        return {
+        pokemon_details = {
             "name": data["name"],
             "id": data["id"],
             "height": data["height"],
             "weight": data["weight"],
             "types": [t["type"]["name"] for t in data["types"]],
         }
+        return pokemon_details
     else:
         print(f"Failed to fetch details for {identifier}")
         return None
